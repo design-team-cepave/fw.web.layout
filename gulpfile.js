@@ -28,7 +28,7 @@ gulp.task('vendor:lessframework', function() {
     .pipe(plumber())
     .pipe(gulp.dest('src/styles/framework'));
 });
-gulp.task('vendor', ['vendor:js', 'vendor:lesslib', 'vendor:lessframework']);
+gulp.task('vendor', ['vendor:js', 'vendor:lesslib']);
 
 gulp.task('browser-sync', function() {
   browserSync({
