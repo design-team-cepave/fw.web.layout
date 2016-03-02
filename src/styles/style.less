@@ -56,10 +56,16 @@ Main components
   z-index: @content;
   // top: @header-height;
 }
+.container {
+  .clearfix;
+  width: 1170px;
+}
 
 .hypotenuse {
   background: url('../images/index/hypotenuse.svg') no-repeat top center;
   height: 210px;
+  position: relative;
+  z-index: @hypotenuse;
 }
 
 .nav {
@@ -81,9 +87,9 @@ Main components
     width: 100%;
   }
   .fw-main-content();
+  z-index: @mainHeader;
   height: @header-height;
   background: @colorGrayLightest;
-  z-index: @above-content;
   @space: 2em;
   .header-inner {
     position: relative;
@@ -222,7 +228,7 @@ Main components
   left: 0;
   right: 0;
   overflow: hidden;
-  z-index: @above-content;
+  z-index: @secondaryNav;
   background: @mainNavBarColor;
   .transform(translateZ(0));
   .transform(translateX(0));
@@ -238,7 +244,7 @@ Main components
   height: auto;
   top: @header-height;
   overflow: hidden;
-  z-index: @above-content;
+  z-index: @secondaryNav;
   background: @mainNavBarColor;
   .transition(opacity .3s 0s, visibility 0s 0s);
   .secondary-nav {
@@ -599,7 +605,7 @@ Main components
   left: 0;
   opacity: 0;
   visibility: hidden;
-  z-index: @above-content;
+  z-index: @secondaryNav;
   .transition(opacity .3s 0s, visibility 0s .3s);
 
   form {
@@ -648,7 +654,7 @@ Main components
 .overlay {
   /* shadow layer visible when navigation is active */
   position: fixed;
-  z-index: 2;
+  z-index: @overlay;
   height: 100%;
   width: 100%;
   top: 0;
@@ -856,16 +862,16 @@ body {
   overflow-x: hidden;
 }
 .hero {
-  background:#fff  url(../images/index/hero-bg.png) no-repeat center center;
-  background-size: cover;
-  min-height: 822px;
+  background: url(../images/index/hero-bg.png) no-repeat top center;
+  // background-size: cover;
+  min-height: 830px;
   position: relative;
-  // top: 84px;
-  padding: 0 0 62px 0;
-
+  padding: 0;
+  & + .hypotenuse {
+    margin-top: -220px;
+  }
   .headline {
     .clearfix;
-    margin: 0 0 127px 0;
     img {
       color: #fff;
       height: 42px;
@@ -895,35 +901,40 @@ body {
       line-height: 56px;
     }
   }
-
-  .intro {
-    margin: -300px auto 62px;
-    width: 1170px;
-    .clearfix;
-    img {
-      .fl;
-      margin: 0 97px 0 84px;
+}
+.intro {
+  z-index: @intro;
+  position: inherit;
+  margin: 0 auto 66px;
+  background-color: #fff;
+  padding-bottom: 60px;
+  .clearfix;
+  > .container {
+    margin-top: -150px;
+  }
+  img {
+    .fl;
+    margin: 0 97px 0 84px;
+  }
+  .slogon {
+    .fl;
+    margin: 96px 51px 0 0;
+    width: 100px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+    color: #7D98B3;
+    h3 {
+      margin: 0 0 17px 0;
     }
-    .slogon {
-      .fl;
-      margin: 96px 51px 0 0;
-      width: 80px;
-      font-size: 40px;
-      line-height: 52px;
-      color: #7D98B3;
-      h3 {
-        margin: 0 0 17px 0;
-      }
-    }
-    .desc {
-      margin: 103px 0 0 0;
-
-      color: #6F787E;
-      font-size: 13px;
-      line-height: 25px;
-      p {
-        margin: 0 0 17px 0;
-      }
+  }
+  .desc {
+    margin: 103px 0 0 0;
+    color: #6F787E;
+    font-size: 13px;
+    line-height: 25px;
+    p {
+      margin: 0 0 17px 0;
     }
   }
 }
