@@ -1,4 +1,8 @@
-extends layout
+extends _layouts/_default
 
 block content
-  h1 Fastweb
+  include _modules/_browsehappy
+  include _modules/_navigationbar
+  include _pages/_index
+  include _layouts/_footer
+  .overlay

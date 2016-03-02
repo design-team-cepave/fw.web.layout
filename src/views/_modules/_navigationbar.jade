@@ -1,0 +1,20 @@
+header.main-header
+  .header-inner
+    a.logo(href='javascript:;')
+      img(src='images/brand-logo.svg', alt='Logo')
+    nav.nav
+      //- Primary-nav
+      ul.primary-nav
+        include _partials/_cd-secondary-nav-01
+        include _partials/_cd-secondary-nav-02
+        include _partials/_cd-secondary-nav-03
+        include _partials/_cd-secondary-nav-04
+    //- fw-header-buttons
+    include _partials/_utility-buttons
+    .login
+      form
+        input(type='text', placeholder='帐号')
+        input(type='password', placeholder='密码')
+        //- sumbit 送出
+        input(type='submit' value='送出')
+.header-space

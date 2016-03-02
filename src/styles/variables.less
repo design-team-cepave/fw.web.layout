@@ -1,0 +1,106 @@
+// Font
+@baseFontFamily     : 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+@headingsFontFamily : @baseFontFamily;
+@buttonsFontFamily  : @baseFontFamily;
+@controlsFontFamily : @baseFontFamily;
+@codeFontFamily     : Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Grid
+@gridWidth       : 1000;
+@gridGutterWidth : 30;
+
+// Type
+@baseFontSize   : 14;
+@baseLineHeight : 1.6;
+@baseLine       : @baseFontSize * @baseLineHeight;
+@baseLineInEms  : @baseLine / @em;
+
+// Heading
+@h1FontSize: @baseFontSize + 22px; // 36px
+@h2FontSize: @baseFontSize + 16px; // 30px
+@h3FontSize: @baseFontSize + 10px; // 24px
+@h4FontSize: @baseFontSize + 4px; // 18px
+@h5FontSize: @baseFontSize + 0px; // 14px
+@h6FontSize: @baseFontSize - 2px; // 12px
+
+@h1SubheadingFontSize: @baseFontSize + 16px; // 30px
+@h2SubheadingFontSize: @baseFontSize + 10px; // 24px
+@h3SubheadingFontSize: @baseFontSize + 4px; // 18px
+@h4SubheadingFontSize: @baseFontSize + 0px; // 14px
+@h5SubheadingFontSize: @baseFontSize - 2px; // 12px
+
+// Font size
+@superSmallFontSize   : @baseFontSize - 4px; // 10px
+@smallFontSize        : @baseFontSize - 2px; // 12px
+@leadFontSize         : @baseFontSize + 4px; // 18px
+@bigFontSize          : @baseFontSize + 4px; // 18px
+@quoteFontSize        : @baseFontSize + 2px; // 16px
+@buttonsFontSize      : @baseFontSize - 1px; // 13px
+@buttonsSmallFontSize : @baseFontSize - 3px; // 11px
+
+// Colors
+@colorBlack        : #0f0f0f;
+@colorBlue         : #3d58a8;
+@colorRed          : #d70a16;
+@colorGreen        : #159776;
+@colorYellow       : #fddc43;
+
+@colorToryBlue     : #0E4D8C;
+@colorBoston       : #329CA6;
+@colorPunch        : #D92E28;
+@colorBurntSienna  : #E67650;
+@colorRollingStone : #6F787E;
+
+@colorPrimaryA     : @colorToryBlue;
+@colorPrimaryB     : @colorPunch;
+@colorSecondaryA   : @colorBoston;
+@colorSecondaryB   : @colorBurntSienna;
+
+@colorGrey         : @colorRollingStone;
+
+@colorGrayLightest : desaturate(lighten(@colorGrey, 60%), 5%);
+@colorGrayLighter  : desaturate(lighten(@colorGrey, 50%), 5%);
+@colorGrayLight    : desaturate(lighten(@colorGrey, 35%), 5%);
+@colorGray         : desaturate(lighten(@colorGrey, 25%), 5%);
+@colorGrayDark     : desaturate(lighten(@colorGrey, 12%), 5%);
+@colorGrayDarker   : @colorGrey;
+@colorGrayDarkest  : desaturate(darken(@colorGrey, 12%), 5%);
+
+
+// LinkColor
+@colorLink      : #3570c3;
+@colorLinkHover : @colorRed;
+
+// Forms
+@fieldsBottom: 1em;
+
+// Util
+@em: @baseFontSize * 1em; // outputting ems, e.g. 14 / @em
+
+// Setting
+@logoWidth            : 192px;
+@backgroundBody       : @colorGrayLighter;
+@bgBackgroundColor    : @colorGrayLighter;
+@tfootBackgroundColor : @colorGrayLightest;
+@mainNavBarColor      : #2E6399;
+@colorBody            : @colorPrimaryA;
+@colorHeadings        : @colorPrimaryA;
+@header-height        : 84px;
+@login-height         : 120px;
+@width                : 1200px;
+
+// z-index
+@below-content : 1;
+@content       : 2;
+@above-content : 3;
+
+@alpha   : 42px;
+@beta    : 32px;
+@gamma   : 28px;
+@delta   : 26px;
+@epsilon : 24px;
+@zeta    : 20px;
+@eta     : 18px;
+@theta   : 15px;
+@iota    : 14px;
+@kappa   : 12px;
