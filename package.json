@@ -29,7 +29,6 @@
     "gulp-util": "~3.0.4",
     "gulp-watch": "^4.3.5",
     "marked": "~0.3.0",
-    "reactify": "1.1.1",
     "through2": "^0.6.5",
     "yargs": "^3.9.0"
   }
