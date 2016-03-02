@@ -6,7 +6,6 @@
   },
   "devDependencies": {
     "css-reset-less": "~0.0.1",
-    "lesshat": "^3.0.2",
-    "kube": "git@github.com:imperavi/kube.git#^3.0.2"
+    "lesshat": "^3.0.2"
   }
 }
