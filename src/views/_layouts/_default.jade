@@ -7,9 +7,8 @@ html(lang="zh")
     meta(name='keywords', content='CDN,CDN网络加速,网站加速,CDN价格,负载均衡,CDN服务,CDN加速服务,自建CDN,CDN排名,cdn加速,网页加速,CDN技术,海外加速,网络加速,应用加速,CDN海外加速,cdn解决方案,CDN加速效果,流媒体点播加速')
     meta(name='description', content='北京快网—专业的云计算CDN网站加速服务提供商_致力于CDN网站加速,CDN海外加速,CDN网络节点部署！提供全方位CDN加速方案:包括CDN动静态加速,CDN下载加速,CDN音视频点直播加速.在全球首次提出基于云计算技术的CloudCDN理念,与CloudTCP,CloudXNS两产品组合,让DNS解析更准,CDN分发更近,TCP传输更快.成而大幅提升网站访问速度及稳定性.')
     title 北京快网CDN—专业领先的CDN,CDN加速,CDN技术,网站加速,云加速,云计算加速,云计算CDN加速服务提供商
-    link(rel="icon" type="image/png" href="./images/favicon.png")
-    link(rel="stylesheet", href="stylesheets/main.css")
+    block head
+
   body.nav-is-fixed
     block content
-    script(src="scripts/vendor/jquery.min.js")
-    script(src="scripts/app.js")
+    block script

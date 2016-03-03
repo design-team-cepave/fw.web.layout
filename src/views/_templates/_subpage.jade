@@ -1,0 +1,14 @@
+extends ../_layouts/_default
+block head
+  - var root_path = '../../../';
+  include ../_layouts/_head
+block content
+  - var root_path = '../../../';
+  include ../_modules/_browsehappy
+  include ../_modules/_navigationbar
+block index
+block foo
+  include ../_layouts/_footer
+block script
+  - var root_path = '../../../';
+  include ../_layouts/_script

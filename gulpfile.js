@@ -101,7 +101,7 @@ gulp.task('images', function() {
 })
 
 gulp.task('templates', function() {
-  return gulp.src('src/views/*.jade')
+  return gulp.src('src/views/**/!(_)*.jade')
     .pipe($.plumber())
     .pipe($.jade({
       pretty: true
