@@ -24,7 +24,7 @@ main.main-content
     .solution
       h3 解决方案特点
       p
-        img(src='', alt='')
+        img(src='#{root_path}', alt='')
       p
         | 1. 通过引入主动的内容管理层和全局负载均衡，并结合内容高速缓存（FastCache）等技术，在客户网内新建高速缓存CDN节点（FastCache），接入快网CDN网络中；
         br
@@ -40,7 +40,7 @@ main.main-content
         img(src='', alt='')
     .benefit
       h3 方案优势
-      img(src='/images/solution/advantage-bg.png', alt='')
+      img(src='#{root_path}/images/solution/advantage-bg.png', alt='')
       div
         | 1. 把快网CDN网内丰富的内容引入到网络，大幅度提升网民访问体验的同时有效缓解大量重复访问热点内容对骨干网和互联互通带宽占用，减少网间流量结算费用；
         br
@@ -49,5 +49,3 @@ main.main-content
   .blank
 
 .overlay
-script(src='/scripts/vendor/jquery-2.1.1.js')
-script(src='/scripts/app.js')
