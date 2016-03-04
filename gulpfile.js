@@ -52,9 +52,9 @@ gulp.task('browser-sync', function() {
 //   spriteData.img.pipe(gulp.dest('./src/images/'));
 //   spriteData.css.pipe(gulp.dest('./src/styles/'));
 // });
-
-gulp.task('styles', function() {
-  return gulp.src('src/styles/main.less')
+gulp.task('styles',['styles:style', 'styles:index', 'styles:products', 'styles:solution'], function() {});
+gulp.task('styles:style', function() {
+  return gulp.src('src/styles/style.less')
     .pipe($.less({
       paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
     })
@@ -63,6 +63,37 @@ gulp.task('styles', function() {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/stylesheets/'));
 });
+gulp.task('styles:index', function() {
+  return gulp.src('src/styles/index.less')
+    .pipe($.less({
+      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
+    })
+    .on('error', $.util.log))
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/stylesheets/'));
+});
+gulp.task('styles:products', function() {
+  return gulp.src('src/styles/products.less')
+    .pipe($.less({
+      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
+    })
+    .on('error', $.util.log))
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/stylesheets/'));
+});
+gulp.task('styles:solution', function() {
+  return gulp.src('src/styles/solution.less')
+    .pipe($.less({
+      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
+    })
+    .on('error', $.util.log))
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/stylesheets/'));
+});
+
 
 gulp.task('js', function() {
   var appFile = gulp.src('src/scripts/*.js')
