@@ -53,23 +53,11 @@ gulp.task('styles', function() {
 });
 
 gulp.task('js', function() {
-  var appFile = gulp.src('src/scripts/*.js')
-    .pipe($.plumber())
-    .pipe(through2.obj(function (file, enc, next) {
-      browserify(file.path, { debug: true })
-        .transform(require('babelify'))
-        .transform(require('debowerify'))
-        .bundle(function (err, res) {
-          if (err) { return next(err); }
-          file.contents = res;
-            next(null, file);
-        });
-      }))
-      .on('error', function (error) {
-        console.log(error.stack);
-        this.emit('end')
-    })
+  var appFile = gulp.src('./src/scripts/navigation.js')
     .pipe( $.rename('app.js'))
+    .pipe( gulp.dest('dist/scripts/'));
+
+  var appFile = gulp.src('./src/scripts/contactus.js')
     .pipe( gulp.dest('dist/scripts/'));
 
   var vendorFile = gulp.src('src/scripts/vendor/**/*')
