@@ -12,7 +12,6 @@ var gulp        = require('gulp'),
     through2    = require('through2'),
     watch       = require('gulp-watch');
 
-
 gulp.task('vendor:js', function() {
   return gulp.src('bower_components/jquery/dist/**/*')
     .pipe(plumber())
@@ -40,60 +39,18 @@ gulp.task('browser-sync', function() {
   });
 });
 
-// gulp.task('sprite', function() {
-//   var spriteData =
-//       gulp.src('.src/images/icons/icon-24/*.*')
-//         .pipe(spritesmith({
-//             imgName     : 'sprite.png',
-//             cssName     : 'sprite.less',
-//             cssFormat   : 'less'
-//         }));
-
-//   spriteData.img.pipe(gulp.dest('./src/images/'));
-//   spriteData.css.pipe(gulp.dest('./src/styles/'));
-// });
-gulp.task('styles',['styles:style', 'styles:index', 'styles:products', 'styles:solution'], function() {});
-gulp.task('styles:style', function() {
-  return gulp.src('src/styles/style.less')
+gulp.task('styles', function() {
+  var hidden_files = '**/_*.*';
+  var ignored_files = '!'+hidden_files;
+  return gulp.src(['src/styles/*.less', ignored_files])
     .pipe($.less({
-      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
+      paths: ['bower_components/lesshat/build/', 'bower_components/css-reset-less/', 'src/styles/']
     })
     .on('error', $.util.log))
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/stylesheets/'));
 });
-gulp.task('styles:index', function() {
-  return gulp.src('src/styles/index.less')
-    .pipe($.less({
-      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
-    })
-    .on('error', $.util.log))
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/stylesheets/'));
-});
-gulp.task('styles:products', function() {
-  return gulp.src('src/styles/products.less')
-    .pipe($.less({
-      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
-    })
-    .on('error', $.util.log))
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/stylesheets/'));
-});
-gulp.task('styles:solution', function() {
-  return gulp.src('src/styles/solution.less')
-    .pipe($.less({
-      paths: ['bower_components/lesshat/build/','bower_components/css-reset-less/','src/styles/']
-    })
-    .on('error', $.util.log))
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/stylesheets/'));
-});
-
 
 gulp.task('js', function() {
   var appFile = gulp.src('src/scripts/*.js')
