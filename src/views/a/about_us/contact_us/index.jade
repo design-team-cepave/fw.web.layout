@@ -1,0 +1,11 @@
+extends ../../../_layouts/_about
+block content
+  - var root_path = '../../../';
+  include ../../../_modules/_browsehappy
+  include ../../../_modules/_navigationbar
+  include _index
+  include ../../../_layouts/_footer
+block script
+  - var root_path = '../../../';
+  include ../../../_layouts/_script
+  script(src="#{root_path}scripts/contactus.js")
