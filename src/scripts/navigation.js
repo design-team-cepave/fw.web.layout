@@ -1,18 +1,7 @@
-// var _ = require("underscore");
-// var jQuery = require("jquery");
-
 jQuery(document).ready(function($){
-
-  //open login form
-  $('.login-trigger').on('click', function(event){
-    event.preventDefault();
-    toggleLogin();
-    closeNav();
-  });
 
   $('.overlay').on('click', function(){
     closeNav();
-    toggleLogin('close')
     $('.overlay').removeClass('is-visible');
   });
 
@@ -33,18 +22,11 @@ jQuery(document).ready(function($){
 
     var selected = $(this);
 
-    // 验证子选单如果是关闭状态时（是否有.is-hidden）动作
-    // if(selected.next(_secondaryNav).hasClass('is-hidden')) {
-    // }else {
-    // }
-
     selected.addClass('selected').next(_secondaryNav).removeClass('is-hidden');
     selected.parent(mainNavItem).siblings(mainNavItem).children(_secondaryNav).addClass('is-hidden');
     selected.parent(mainNavItem).siblings(mainNavItem).children(_primaryNav).removeClass('selected');
 
     $('.overlay').addClass('is-visible');
-
-    toggleLogin('close');
 
   });
 
@@ -53,21 +35,6 @@ jQuery(document).ready(function($){
     $(_primaryNav).removeClass('selected');
   }
 
-  function toggleLogin(type) {
-    if(type=="close") {
-      //close serach
-      $('.login').removeClass('is-visible');
-      $('.login-trigger').removeClass('login-is-visible');
-      $('.overlay').removeClass('login-is-visible');
-    } else {
-      //toggle login visibility
-      $('.login').toggleClass('is-visible');
-      $('.login-trigger').toggleClass('login-is-visible');
-      $('.overlay').toggleClass('login-is-visible');
-      if($('.login').hasClass('is-visible')) $('.login').find('input[type="text"]').focus();
-      ($('.login').hasClass('is-visible')) ? $('.overlay').addClass('is-visible') : $('.overlay').removeClass('is-visible') ;
-    }
-  }
 });
 
 jQuery(document).ready(function($){
