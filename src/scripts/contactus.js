@@ -51,11 +51,11 @@ var mapData = [
   }
 ];
 
-var $mpcnt = $('.fw-maps-content li');
-var $mpctrl = $('.fw-maps-control li').each(function(i){
+var $mpcnt = $('.maps-content li');
+var $mpctrl = $('.maps-control li').each(function(i){
   var $this = $(this);
   $this.click(function(){
-    $mpctrl.find('a').removeClass('fw-active').eq(i).addClass('fw-active');
+    $mpctrl.find('a').removeClass('current').eq(i).addClass('current');
     $mpcnt.hide().eq(i).show();
     BDMap(mapData[i]);
   });
