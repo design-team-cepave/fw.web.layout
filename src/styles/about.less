@@ -1,15 +1,15 @@
 @import 'style';
 
-body{overflow-x: hidden; background: #F3F4F5;}
+body{overflow-x: hidden; }
 
 .main-content{z-index: 999;
-	.hero{ background: #fff; margin: 0 auto;.pr;overflow: hidden;
+	.hero{ background: @bgBackgroundColor; margin: 0 auto;.pr;overflow: hidden;
 		.bg{border: 20px #004080 solid; border-bottom: 0 none;min-height: 533px;position: relative; background-size: cover;
 			h1{font-size: 65px; line-height: 91px; color: #fff;.txc; margin: 173px 0 8px 0;.f7;}
 			p{.f14; line-height: 19px;.txc; color: #fff; letter-spacing: 12px;}
 			hr{.show; width: 170px; height: 0; line-height: 0; border: 0 none; border-bottom: 2px #E64545 solid; margin: 25px auto 0;}
 		}
-		.bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:#fff;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
+		.bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:@bgBackgroundColor;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
 
 	}
 	.category{background: #fff;
@@ -46,7 +46,7 @@ body{overflow-x: hidden; background: #F3F4F5;}
 					}
 					.time{font-size: 13px; line-height: 17px; margin: 0 0 20px 0;}
 					&.f16{.f16; line-height: 31px;}
-					.detail{.f16; line-height: 31px;
+					.detail{.f16; line-height: 31px;margin-right: 55px;
 						p{text-indent: 2em; margin: 0 0 31px 0;}
 						ol{ list-style:decimal outside; margin: 0 0 0 20px;}
 						h5{.f4;.f16;}
