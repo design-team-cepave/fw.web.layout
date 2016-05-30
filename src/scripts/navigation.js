@@ -1,5 +1,25 @@
 jQuery(document).ready(function($){
-
+  $("#fixedbar .bar").on("mouseenter", function (e) {
+      $(this).addClass('hover');
+  });
+  $("#fixedbar .bar").on("mouseleave", function (e) {
+      $(this).removeClass("hover");
+  });
+  $("#gotop").hide();
+  $(window).scroll(function(){
+    if ($(window).scrollTop()>100)
+    {
+      $("#gotop").fadeIn();
+    }
+    else
+    {
+      $("#gotop").fadeOut();
+    }
+  });
+  $("#gotop").click(function(){
+    $('body,html').animate({scrollTop:0},500);
+    return false;
+  });
   $('.overlay').on('click', function(){
     closeNav();
     $('.overlay').removeClass('is-visible');
