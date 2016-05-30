@@ -59,6 +59,9 @@ gulp.task('js', function() {
 
   var appFile = gulp.src('./src/scripts/contactus.js')
     .pipe( gulp.dest('dist/scripts/'));
+    
+  var appFile = gulp.src('./src/scripts/fixed.js')
+    .pipe( gulp.dest('dist/scripts/'));
 
   var vendorFile = gulp.src('src/scripts/vendor/**/*')
     .pipe( gulp.dest('dist/scripts/vendor'));
