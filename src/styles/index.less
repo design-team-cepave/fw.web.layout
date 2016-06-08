@@ -6,8 +6,11 @@ body {
 .hero {
   background: url(../images/index/hero-bg.jpg) no-repeat top center;
   // background-size: cover;
-  min-height: 830px;
-  position: relative;
+  z-index: @hero;
+  min-height: 640px;
+  width: 100%;
+  top: 83px;
+  position: fixed;
   padding: 0;
   & + .hypotenuse {
     margin-top: -220px;
@@ -17,7 +20,7 @@ body {
     img {
       color: #fff;
       height: 42px;
-      margin: 222px auto 0;
+      margin: 100px auto 0;
       .show;
     }
     h2 {
@@ -34,11 +37,11 @@ body {
       line-height: 0;
       border: 0 none;
       border-bottom: 2px #E64545 solid;
-      margin: 25px auto 98px;
+      margin: 25px auto 70px;
     }
     p {
       .txc;
-      color: #fff;
+      color: rgba(255,255,255, .75);
       font-size: 36px;
       line-height: 56px;
     }
@@ -47,7 +50,7 @@ body {
 .intro {
   z-index: @intro;
   position: inherit;
-  margin: 0 auto 66px;
+  margin: 0 auto 0;
   background-color: #fff;
   padding-bottom: 60px;
   .clearfix;
@@ -81,9 +84,13 @@ body {
   }
 }
 .main-content {
-  // background: #f3f4f5;
   // top: 0;
   // padding: 66px 0 0 0;
+  padding-top: 460px;
+  .main {
+    background: #f3f4f5;
+    padding-top: 66px;
+  }
   .wrapper {
     width: 1170px;
     margin: 0 auto;
