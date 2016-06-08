@@ -95,7 +95,7 @@ Main components
     height: @header-height;
     min-width: 1170px;
     .logo {
-      padding-top: (@header-height - 38px) / 2;
+      padding-top: (@header-height - 53px) / 2;
       position: absolute;
       top: 0;
       left: @space;
@@ -208,15 +208,17 @@ Main components
       }
       .t-text {
         &:extend(.primary-nav-item-icon-text);
-        padding-top: (84 - 48)/2*1px;
+        padding-top: (84 - 56)/2*1px;
       }
       .b-text {
         &:extend(.primary-nav-item-icon-text);
       }
     }
   }
-  .primary-nav-item + .primary-nav-item {
-    margin-left: 50px;
+  @media screen and (min-width: 1280px){
+    .primary-nav-item + .primary-nav-item {
+      margin-left: 50px;
+    }
   }
 }
 .full-secondary-nav {
@@ -263,6 +265,7 @@ Main components
       }
     }
     .icon-24 {
+      vertical-align: middle;
       &:extend(.is-inlineblock);
     }
   }
@@ -275,10 +278,10 @@ Main components
   }
   .text {
     &:extend(.is-inlineblock);
-    vertical-align: top;
   }
   .icon-24 + .text {
     margin-left: .5em;
+    vertical-align: middle;
   }
 }
 .secondary-nav-wrapper {
