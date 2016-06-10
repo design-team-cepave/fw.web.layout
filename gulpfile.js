@@ -18,16 +18,22 @@ gulp.task('vendor:js', function() {
     .pipe(gulp.dest('src/scripts/vendor'));
 });
 gulp.task('vendor:lesslib', function() {
-  return gulp.src('bower_components/lesshat/build/lesshat.less')
+  return gulp.src(['bower_components/lesshat/build/lesshat.less',])
     .pipe(plumber())
     .pipe(gulp.dest('src/styles/lib'));
 });
-gulp.task('vendor:lessframework', function() {
-  return gulp.src('bower_components/kube/less/*')
+gulp.task('vendor:lessgrid', function() {
+  return gulp.src(['bower_components/Responsable-Grid-System/less/responsable.less',])
     .pipe(plumber())
-    .pipe(gulp.dest('src/styles/framework'));
+    .pipe(gulp.dest('src/styles/lib'));
 });
-gulp.task('vendor', ['vendor:js', 'vendor:lesslib']);
+gulp.task('vendor:lessreset', function() {
+  return gulp.src(['bower_components/css-reset-less/css-reset.less',])
+    .pipe(plumber())
+    .pipe(gulp.dest('src/styles/lib'));
+});
+
+gulp.task('vendor', ['vendor:js', 'vendor:lesslib', 'vendor:lessgrid']);
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -44,7 +50,13 @@ gulp.task('styles', function() {
   var ignored_files = '!'+hidden_files;
   return gulp.src(['src/styles/*.less', ignored_files])
     .pipe($.less({
-      paths: ['bower_components/lesshat/build/', 'bower_components/css-reset-less/', 'src/styles/']
+      paths: [
+      'bower_components/lesshat/build/',
+      'bower_components/hyx.less/',
+      'bower_components/Responsable-Grid-System/less/',
+      'bower_components/css-reset-less/',
+      'src/styles/'
+      ]
     })
     .on('error', $.util.log))
     .pipe(sourcemaps.init())
@@ -59,7 +71,7 @@ gulp.task('js', function() {
 
   var appFile = gulp.src('./src/scripts/contactus.js')
     .pipe( gulp.dest('dist/scripts/'));
-    
+
   var appFile = gulp.src('./src/scripts/fixed.js')
     .pipe( gulp.dest('dist/scripts/'));
 
