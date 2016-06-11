@@ -45,8 +45,9 @@ body {
     p {
       .txc;
       color: rgba(255,255,255, .75);
-      font-size: 36px;
-      line-height: 56px;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: .05em;
     }
   }
 }
@@ -55,44 +56,63 @@ body {
   position: inherit;
   margin: 0 auto 0;
   background-color: #fff;
-  padding-bottom: 60px;
+  @media @desktop-xl {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  @media @desktop-lg {
+    padding-top: 50px;
+  }
+  @media @desktop-md {
+    padding-top: 40px;
+  }
+  // @media @desktop-sm {
+  // }
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+
   .clearfix;
   > .container {
-    margin: -150px auto 0;
+    margin: -80px auto 0;
   }
-  img {
-    .fl;
-    margin: 0 97px 0 84px;
+  .fig-img {
+    .column(4);
+    .push(1);
+    img {
+      .shadow-sm;
+    }
+  }
+  .r {
+    .column(7);
   }
   .slogon {
+    padding-right: 30px;
     .fl;
-    margin: 96px 51px 0 0;
-    width: 100px;
-    font-size: 40px;
+    font-size: 32px;
+    line-height: 48px;
     font-weight: 400;
-    line-height: 52px;
     color: #7D98B3;
     h3 {
       margin: 0 0 17px 0;
     }
   }
   .desc {
-    margin: 103px 0 0 0;
     color: #6F787E;
     font-size: 13px;
     line-height: 25px;
     p {
       margin: 0 0 17px 0;
+      text-align: justify;
     }
   }
 }
 .main-content {
-  // top: 0;
-  // padding: 66px 0 0 0;
-  padding-top: 460px;
+  margin-top: 480px;
   .main {
-    background: #f3f4f5;
-    padding-top: 66px;
+    background: @bgBackgroundColor;
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
   .wrapper {
     width: 1140px;
@@ -100,46 +120,45 @@ body {
   }
   .box {
     .pr;
-    height: 477px;
+    height: 396px;
     img {
-      margin: 85px 0 10px 70px;
+      margin-bottom: 20px;
     }
     h3 {
-      margin: 0 0 25px 160px;
+      margin-bottom: 20px;
       font-size: 30px;
       line-height: 40px;
-      color: #C4C9CD;
+      color: @colorGrayLighter;
     }
     p {
-      margin: 0 0 35px 160px;
+      margin-bottom: 30px;
       font-size: 13px;
-      line-height: 18px;
-      color: #F3F4F5;
-      .viewmore {
-        .show;
-        width: 300px;
-        height: 35px;
-        line-height: 35px;
-        color: #fff;
-        background: #59abb3;
-        .txc;
-        .f14;
+      line-height: 26px;
+      color: @colorGrayLightest;
+    }
+    .viewmore {
+      .show;
+      height: 35px;
+      line-height: 35px;
+      color: @colorGrayLightest;
+      border: 1px solid @colorGrayLightest;
+      .txc;
+      .f14;
+      &:hover {
+        background-color: @colorGrayLightest;
+        color: @colorLink;
       }
     }
   }
   #box-cdn {
-    background:url(../images/index/section-cdn-fastlife-bg.png) no-repeat 0 0;
+    background:url('../images/index/section-cdn-fastlife-bg-2.png') no-repeat 0 0;
   }
   #box-nd {
-    background:url(../images/index/section-nd-bg.png) no-repeat 0 0;
-    margin: -16px 0 44px 0;
+    background:url('../images/index/section-nd-bg-2.png') no-repeat 0 0;
+    margin: -30px 0 30px 0;
   }
   #box-xns {
-    background:url(../images/index/section-cloudcdn-bg.png) no-repeat 0 0;
-    margin: 0 0 75px 0;
-    h3,p {
-      color: #6F787E
-    }
+    background:url('../images/index/section-cloudcdn-bg-2.png') no-repeat 0 0;
   }
   .clients {
     margin: 0 0 90px 0;
@@ -149,7 +168,7 @@ body {
       h2 {
         .fl;
         margin:0 78px 0 0;
-        background:url(../images/index/primary-style-bg.png) no-repeat 0 0;
+        background:url('../images/index/primary-style-bg.png') no-repeat 0 0;
         padding: 50px 0 0 100px;
         color: #3D4141;
         font-size: 48px;
@@ -319,4 +338,19 @@ body {
 .honor {
   width: 1140px;
   margin: 0 auto;
+}
+
+.figcaption {
+  .column(4);
+  .push(1);
+  margin-top: 50px;
+  #box-cdn & {
+  }
+  #box-nd & {
+    margin-top: 70px;
+    .push(7);
+  }
+  #box-xns & {
+
+  }
 }

@@ -21,7 +21,7 @@ html {
 body {
   font-size: 1.6em;
   font-family: @baseFontFamily;
-  color: @colorPrimaryA;
+  color: @colorRollingStone;
   background-color: @bgBackgroundColor;
   &.overflow-hidden {
     overflow: hidden;
@@ -42,16 +42,16 @@ Main components
 -------------------------------- */
 
 .fw-main-content() {
-  will-change: transform;
+  // will-change: transform;
   position: relative;
-  .transition(translateZ(0));
-  .transition(transform .3s);
+  // .transition(translateZ(0));
+  // .transition(transform .3s);
 }
 
 .main-content {
   .fw-main-content();
-  // background: @bgBackgroundColor;
-  min-height: 100vh;
+
+  // min-height: 100vh;
   z-index: @content;
   // top: @header-height;
 }
@@ -61,8 +61,8 @@ Main components
 }
 
 .hypotenuse {
-  background: url('../images/index/hypotenuse.svg') no-repeat top center;
-  height: 210px;
+  background: url('../images/index/hypotenuse.svg') no-repeat top right;
+  height: 140px;
   position: relative;
   z-index: @hypotenuse;
 }
@@ -90,6 +90,7 @@ Main components
   height: @header-height;
   background: @colorGrayLightest;
   @space: 2em;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05), 0px 3px 10px rgba(0, 0, 0, 0.10);
   .header-inner {
     position: relative;
     margin: 0 auto;
@@ -109,7 +110,9 @@ Main components
   }
   .clearfix();
 }
-
+.bg-white {
+  .bg-white
+}
 .logo {
   // logo size = 192x38
   width: @logoWidth;
