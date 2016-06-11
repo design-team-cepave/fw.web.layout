@@ -5,34 +5,35 @@ footer.main-footer
       .footer-content
         dl
           dt 快网优势
-          dd: a(href='javascript:;') 快速响应
-          dd: a(href='javascript:;') 先进技术
-          dd: a(href='javascript:;') 专业服务
+          dd 快速响应
+          dd 先进技术
+          dd 专业服务
         dl
           dt 产品介绍
-          dd: a(href='javascript:;') CloudCDN
-          dd: a(href='javascript:;') CloudXNS
-          dd: a(href='javascript:;') 牛盾云加速
-          dd: a(href='javascript:;') CloudCache
-          dd: a(href='javascript:;') CloudDIY
+          dd: a(href='#{root_path}a/products/static/') CloudCDN
+          dd: a(href='#{root_path}a/products/CloudXNS/') CloudXNS
+          dd: a(href='#{root_path}a/products/NewDefend/') 牛盾云加速
+          dd: a(href='#{root_path}a/products/cs/index') CloudCache
+          dd: a(href='#{root_path}a/products/DIY/') CloudDIY
         dl
           dt 技术支持
-          dd: a(href='javascript:;') 常见问题
-          dd: a(href='javascript:;') 服务指南
+          dd: a(href='#{root_path}a/service_guide/') 技术服务
+          dd: a(href='#{root_path}a/faq/') 服务指南
         dl
           dt 客户案例
-          dd: a(href='javascript:;') 个案分析
-          dd: a(href='javascript:;') 典型客户
+          //- dd: a(href='#{root_path}a/') 个案分析
+          dd: a(href='#{root_path}a/typical_eg/') 典型客户
         dl
           dt 新闻中心
-          dd: a(href='javascript:;') 快网新闻
-          dd: a(href='javascript:;') 媒体报导
-          dd: a(href='javascript:;') 行业新闻
+          //- dd: a(href='#{root_path}a/news/detail/') 快网新闻
+          dd: a(href='#{root_path}a/news/news_reports/') 媒体报导
+          dd: a(href='#{root_path}a/news/industry/') 行业新闻
         dl
           dt 关于快网
-          dd: a(href='javascript:;') 关于我们
-          dd: a(href='javascript:;') 招聘信息
-          dd: a(href='javascript:;') 友情链接
+          dd: a(href='#{root_path}a/about_us/company/') 关于我们
+          dd: a(href='#{root_path}a/join_us/') 招聘信息
+          dd: a(href='#{root_path}a/links/') 友情链接
+          dd: a(href='#{root_path}a/about_us/contact_us') 联系我们
         dl.tel
           dt 客户热线
           dd 运维中心：400-811-0223
@@ -46,21 +47,19 @@ footer.main-footer
           br
           | 世纪互联集团（NASDAQ：VNET）
 #fixedbar
-    #gotop.bar
-        a(href="javascript:;" title="返回顶部")
-            i 返回顶部
-    #codebar.bar
-        a(href="javascript:;" title="微信")
-            i 微信
-        .barcon
-            img(src="images/qrcode.png" width="126" height="116")
-            p 北京快网微信公众号
-            s >
-    #qqbar.bar
-        a(href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008110223&f=1&ty=1&aty=0&a=&from=6" target="_blank" title="QQ客服:4008110223")
-            i QQ
-    #embar.bar
-        a(href="mailto:support@fastweb.com.cn" title="邮件")
-            i 邮件
-
-
+  #gotop.bar
+    a(href="javascript:;" title="返回顶部")
+      i 返回顶部
+  #codebar.bar
+    a(href="javascript:;" title="微信")
+      i 微信
+    .barcon
+      img(src="images/qrcode.png" width="126" height="116")
+      p 北京快网微信公众号
+      //- s >
+  #qqbar.bar
+    a(href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4008110223&f=1&ty=1&aty=0&a=&from=6" target="_blank" title="QQ客服:4008110223")
+      i QQ
+  #embar.bar
+    a(href="mailto:support@fastweb.com.cn" title="邮件")
+      i 邮件
