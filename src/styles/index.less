@@ -107,11 +107,35 @@ body {
     }
   }
 }
+.viewmore {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  .show;
+  .txc;
+  .f14;
+  &.fill {
+    color: @colorGrayLightest;
+    background: #59abb3;
+  }
+  &.ghost {
+    color: @colorGrayLightest;
+    border: 1px solid @colorGrayLightest;
+    &:hover {
+      background-color: @colorGrayLightest;
+      color: @colorLink;
+    }
+  }
+}
 .main-content {
   margin-top: 480px;
   .main {
     background: @bgBackgroundColor;
     padding-top: 60px;
+    padding-bottom: 50px;
+  }
+  .bg-white {
+    padding-top: 50px;
     padding-bottom: 50px;
   }
   .wrapper {
@@ -132,22 +156,8 @@ body {
     }
     p {
       margin-bottom: 30px;
-      font-size: 13px;
-      line-height: 26px;
+      .f13-26;
       color: @colorGrayLightest;
-    }
-    .viewmore {
-      .show;
-      height: 35px;
-      line-height: 35px;
-      color: @colorGrayLightest;
-      border: 1px solid @colorGrayLightest;
-      .txc;
-      .f14;
-      &:hover {
-        background-color: @colorGrayLightest;
-        color: @colorLink;
-      }
     }
   }
   #box-cdn {
@@ -160,197 +170,119 @@ body {
   #box-xns {
     background:url('../images/index/section-cloudcdn-bg-2.png') no-repeat 0 0;
   }
-  .clients {
-    margin: 0 0 90px 0;
+
+  .clients,
+  .honor,
+  .news {
+    .clearfix;
+    h2 {
+      .column(3);
+      background:url('../images/index/primary-style-bg.png') no-repeat 0 0;
+      padding: 50px 0 0 100px;
+      color: #3D4141;
+      font-size: 42px;
+      line-height: 64px;
+    }
+    p {
+      .f13-26;
+      color: #6F787E;
+    }
+    margin: 0 0 40px 0;
     .desc {
+      .pr;
+      margin-bottom: 20px;
       .clearfix;
-      margin: 0 0 36px 0;
-      h2 {
-        .fl;
-        margin:0 78px 0 0;
-        background:url('../images/index/primary-style-bg.png') no-repeat 0 0;
-        padding: 50px 0 0 100px;
-        color: #3D4141;
-        font-size: 48px;
-        line-height: 64px;
-      }
       p {
-        .fl;
-        margin: 50px 0 0 0;
-        width: 600px;
-        font-size: 13px;
-        line-height: 25px;
-        color: #6F787E;
+        .column(9);
+        padding-top: 60px;
       }
     }
     .case {
-      .pr;
-      .detail {
-        .pa;
-        top: 105px;
-        left: 180px;
-        width: 420px;
-        background: #fff;
-        box-shadow: 3px 10px 10px rgba(0,0,0,.1);
-        padding: 55px 55px 40px 60px;
-        img {
-          margin: 0 0 25px 0;
-        }
-        p {
-          color: #6F787E;
-          font-size: 13px;
-          line-height: 25px;
-          margin: 0 0 20px 0;
-        }
-        .author {
-          color: #9B9B9B;
-          font-size: 14px;
-          line-height: 29px;
-          margin: 0 0 35px 0;
-        }
-        .viewmore {
-          .show;
-          width: 100%;
-          height: 35px;
-          line-height: 35px;
-          color: #fff;
-          background: #59abb3;
-          .txc;
-          .f14;
-        }
+      background:url('../images/index/section-cient-bg-2.png') no-repeat 0 0;
+      height: 396px;
+    }
+    .detail {
+      .column(4);
+      .push(1);
+      margin-top: 50px;
+      padding: 40px 30px;
+      background: #fff;
+      box-shadow: 3px 10px 10px rgba(0,0,0,.1);
+      .logo {
+        margin-bottom:0px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .author {
+        color: #9B9B9B;
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 30px;
       }
     }
   }
+
   .news {
     .pr;
     margin: 0 0 65px 0;
-    min-height: 522px;
+    min-height: 396px;
+    .desc {
+      .column(6);
+      .push(6);
+    }
     h2 {
-      .pa;
-      top:0;
-      left:600px;
-      z-index: 102;
-      width:196px;
-      background:url(../images/index/primary-style-bg.png) no-repeat 0 0;
-      padding: 50px 0 0 100px;
-      color: #3D4141;
-      font-size: 48px;
-      line-height: 69px;
+      width: auto;
     }
     .img {
+      .push(1);
+      .column(6);
+      height: 369px;
+      background: url('../images/index/news-figcaption-img-3.png') no-repeat 0 0;
       .pa;
-      top: 82px;
-      left: 170px;
-      z-index: 100;
-      width: 531px;
-      height: 440px;
-      overflow-x: hidden;
+      left: 10px;
+      top: 67px;
     }
     .detail {
-      z-index: 101;
-      .pa;
-      top: 132px;
-      left: 640px;
-      width: 420px;
-      background: #fff;
-      box-shadow: 3px 10px 10px rgba(0,0,0,.1);
-      padding: 101px 69px 20px 69px;
+      margin-top: 0;
+      .push(7);
       h3 {
         color: #535353;
         font-size: 20px;
         line-height: 26px;
         margin: 0 0 13px 0;
         .f4;
-
-      }
-      p {
-        color: #6F787E;
-        font-size: 13px;
-        line-height: 25px;
-        margin: 0 0 35px 0;
-      }
-      .viewmore {
-        .show;
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        color: #fff;
-        background: #59abb3;
-        .txc;
-        .f14;
       }
     }
   }
   .honor {
-    .pr;
-    min-height: 536px;
-    h2 {
-      .pa;
-      top:0;
-      left:0;
-      z-index: 102;
-      width:196px;
-      background:url(../images/index/primary-style-bg.png) no-repeat 0 0;
-      padding: 50px 0 0 100px;
-      color: #3D4141;
-      font-size: 48px;
-      line-height: 69px;
-    }
     .img {
-      .pa;
-      top: 146px;
-      left: 0;
-      z-index: 100;
-      overflow-x: hidden;
+      background: url('../images/index/section-honor-bg-2.png') no-repeat 0 0;
+      height: 396px;
     }
     .detail {
-      z-index: 101;
-      .pa;
-      top: 118px;
-      left: 69px;
-      width: 420px;
-      background: #fff;
-      box-shadow: 3px 10px 10px rgba(0,0,0,.1);
-      padding: 96px 47px 58px 48px;
-      ul {
-        padding: 0 0 30px 0;
+      color: #6F787E;
+      .f13-26;
+      dl {
+        margin-bottom: 30px;
       }
-      li {
-        color: #6F787E;
-        font-size: 13px;
-        line-height: 17px;
-        margin: 0 0 10px 0;
+      dt {
+        .fl;
+        width: 4em;
       }
-      .viewmore {
-        .show;
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        color: #fff;
-        background: #59abb3;
-        .txc;
-        .f14;
+      dd {
+        margin-left: 5em;
       }
     }
   }
-}
-
-.honor {
-  width: 1140px;
-  margin: 0 auto;
 }
 
 .figcaption {
   .column(4);
   .push(1);
   margin-top: 50px;
-  #box-cdn & {
-  }
   #box-nd & {
     margin-top: 70px;
     .push(7);
-  }
-  #box-xns & {
-
   }
 }
