@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
     $('body,html').animate({scrollTop:0},500);
     return false;
   });
-  $('.overlay').on('click', function(){
+  $('.overlay').on('mouseenter', function(){
     closeNav();
     $('.overlay').removeClass('is-visible');
   });
@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
       _secondaryNav = mainNav.item.secondaryNav;
 
   //open submenu
-  mainNav.item.primaryNav.on('click', function(event){
+  mainNav.item.primaryNav.on('mouseenter', function(event){
 
     event.preventDefault();
 
@@ -69,7 +69,7 @@ jQuery(document).ready(function($){
       visibleSlidePosition = 0;
 
     //change visible slide
-    sliderNav.on('click', 'li', function(event){
+    sliderNav.on('mouseenter', 'li', function(event){
       event.preventDefault();
       var selectedItem = $(this);
       if(!selectedItem.hasClass('selected')) {
