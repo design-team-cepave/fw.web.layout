@@ -10,7 +10,23 @@ var gulp        = require('gulp'),
     reload      = browserSync.reload,
     sourcemaps  = require('gulp-sourcemaps'),
     through2    = require('through2'),
-    watch       = require('gulp-watch');
+    watch       = require('gulp-watch'),
+    gulpif      = require('gulp-if'),
+    sprity      = require('sprity');
+
+gulp.task('sprites', function () {
+  return sprity.src({
+    src: ['./src/images/icons/**/*.png'],
+    style: './_icon.less',
+    cssPath: '../images/icons',
+    split: true,
+    margin: 0,
+    name: 'icon',
+    processor: 'less',
+    prefix: ''
+  })
+  .pipe(gulpif('*.png', gulp.dest('./src/images/icons'), gulp.dest('./src/styles/')));
+});
 
 gulp.task('vendor:js', function() {
   return gulp.src('bower_components/jquery/dist/**/*')
