@@ -10,7 +10,21 @@ var gulp        = require('gulp'),
     reload      = browserSync.reload,
     sourcemaps  = require('gulp-sourcemaps'),
     through2    = require('through2'),
-    watch       = require('gulp-watch');
+    watch       = require('gulp-watch'),
+    gulpif      = require('gulp-if'),
+    sprity      = require('sprity');
+
+// generate sprite.png and _sprite.scss
+gulp.task('sprites', function () {
+  return sprity.src({
+    src: './src/images/icon-56/*.{png,jpg}',
+    style: './sprite.css',
+    // ... other optional options
+    // for example if you want to generate scss instead of css
+    processor: 'scss', // make sure you have installed sprity-sass
+  })
+  .pipe(gulpif('*.png', gulp.dest('./dist/images/'), gulp.dest('./dist/styles/')))
+});
 
 gulp.task('vendor:js', function() {
   return gulp.src('bower_components/jquery/dist/**/*')
