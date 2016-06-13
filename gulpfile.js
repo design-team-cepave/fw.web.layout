@@ -14,16 +14,18 @@ var gulp        = require('gulp'),
     gulpif      = require('gulp-if'),
     sprity      = require('sprity');
 
-// generate sprite.png and _sprite.scss
 gulp.task('sprites', function () {
   return sprity.src({
-    src: './src/images/icon-56/*.{png,jpg}',
-    style: './sprite.css',
-    // ... other optional options
-    // for example if you want to generate scss instead of css
-    processor: 'scss', // make sure you have installed sprity-sass
+    src: ['./src/images/icons/**/*.png'],
+    style: './_icon.less',
+    cssPath: '../images/icons',
+    split: true,
+    margin: 0,
+    name: 'icon',
+    processor: 'less',
+    prefix: ''
   })
-  .pipe(gulpif('*.png', gulp.dest('./dist/images/'), gulp.dest('./dist/styles/')))
+  .pipe(gulpif('*.png', gulp.dest('./src/images/icons'), gulp.dest('./src/styles/')));
 });
 
 gulp.task('vendor:js', function() {
