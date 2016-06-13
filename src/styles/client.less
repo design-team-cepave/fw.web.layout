@@ -4,11 +4,9 @@ body{overflow-x: hidden;}
 
 .main-content{z-index: 999;
 	.hero{ background: @bgBackgroundColor; margin: 0 auto;.pr;overflow: hidden;
-		.bg{border: 20px #004080 solid; border-bottom: 0 none;min-height: 533px;position: relative; background-size: cover;
-
+		.bg{border: 20px #004080 solid; border-bottom: 0 none;min-height: 420px;position: relative; background-size: cover;
 		}
-		.bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:@bgBackgroundColor;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
-
+		.bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:#fff;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
 	}
 
 
@@ -53,12 +51,12 @@ body{overflow-x: hidden;}
 	.blank{background: #fff; height: 0;}
 }
 
-#typical .bg{background:url(../images/client/banner-typical_eg@2x.png) no-repeat center 0;
+#typical .bg{background:url(../images/client/banner-typical_eg.png) no-repeat center 0;
 	h1{font-size: 65px; line-height: 91px; color: #fff;.txc; margin: 173px 0 8px 0;.f7;}
 	p{.f14; line-height: 19px;.txc; color: #fff; letter-spacing: 12px;}
 	hr{.show; width: 170px; height: 0; line-height: 0; border: 0 none; border-bottom: 2px #E64545 solid; margin: 25px auto 0;}
 }
-#client	.bg{background:url(../images/client/banner-client-story@2x.png) no-repeat center 0;
+#client	.bg{background:url(../images/client/banner-client-story.png) no-repeat center 0;
 	.txt{width: 431px;margin: 128px 0 0 804px;
 		img{.show; margin: 0 0 20px 0;}
 		p{font-size: 13px; line-height: 18px; color: #6F787E; margin: 0 0 64px 0;.clearfix;}
@@ -72,7 +70,7 @@ body{overflow-x: hidden;}
 .footer-top{}
 
 
-@media screen and (max-width: 1440px){
-	#typical .bg{background:url(../images/client/banner-typical_eg.png) no-repeat center 0; }
-	#client .bg{background:url(../images/client/banner-client-story.png) no-repeat center 0; }
+@media screen and (min-width: 1440px){
+	#typical .bg{background:url(../images/client/banner-typical_eg@2x.png) no-repeat center 0; background-size: cover;}
+	#client .bg{background:url(../images/client/banner-client-story@2x.png) no-repeat center 0; background-size: cover;}
 }
