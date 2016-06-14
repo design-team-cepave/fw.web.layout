@@ -9,6 +9,7 @@ Footer
   margin: 0 auto;
   z-index: @footer;
   margin-top: -140px;
+  background-color: @backgroundBody;
 }
 .footer-top {
   &:extend(.hypotenuse);
@@ -42,8 +43,21 @@ Footer
 
 }
 .footer-inner {
-  width: 1140px;
+  min-width: @width;
   margin: 0 auto;
+  @media @desktop-xl {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @media @desktop-lg {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media @desktop-md {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .footer-content {
     .clearfix;
     padding: 35px 0 25px 0;
@@ -51,6 +65,15 @@ Footer
       .fl;
       margin: 0 60px 0 0;
       color: #6F787E;
+      @media @desktop-xl {
+        margin: 0 60px 0 0;
+      }
+      @media @desktop-lg {
+        margin: 0 50px 0 0;
+      }
+      @media @desktop-md {
+        margin: 0 40px 0 0;
+      }
       dt {
        font-size: 16px;
        line-height: 21px;
@@ -65,14 +88,14 @@ Footer
       }
       &.tel {
         color: #89949B;
-        margin: 0 0 0 100px;
+        .fr ();
       }
     }
   }
   .copyright {
     .clearfix;
     padding: 30px 0;
-    margin: 0 0 20px 0;
+    // margin: 0 0 20px 0;
     img {
       .fl;
       margin: 0 10px 0 0;
