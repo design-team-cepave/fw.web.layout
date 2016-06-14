@@ -24,16 +24,33 @@ body{overflow-x: hidden;}
 	}
 	.wrapper {
     .clearfix;
-    width: 1140px; margin: 0 auto;.pr;z-index: 999;
+    width: 1140px; margin: 0 auto;.pr; z-index: 999;
 		.head{
 			h2{color: #3D4141;font-size: 42px; line-height: 64px; margin: 0 0 15px 0;}
 			p{color: #535353; font-size: 20px; line-height: 26px; margin: 0 0 50px 0;}
 		}
-		.title{margin: 0 0 80px 0;padding: 78px 0 0 0;
-			h2{background:url(../images/index/primary-style-bg.png) no-repeat 0 0; padding: 50px 0 0 100px; color: #fff;min-height: 115px;  font-size: 42px; line-height: 64px; margin: 0 0 30px -100px;}
+		.title{
+      .column(12);
+      .clearfix;
+      // .push(1);
+      // margin-bottom: 80px;
+      margin-top: 60px;
+			h2{background:url(../images/index/white-style-bg.png) no-repeat 0 0;
+        padding: 50px 0 0 100px;
+        color: #fff;
+        min-height: 115px;
+        font-size: 42px;
+        line-height: 64px;
+        margin-bottom: 30px;}
 			p{.f16; line-height: 31px;color: #fff}
 		}
-		.product{.clearfix;overflow: hidden;}
+		.product{
+      clear: both;
+      .clearfix;
+      overflow: hidden;
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
 		.box {
       .column(5);
       .push(1);
@@ -41,9 +58,24 @@ body{overflow-x: hidden;}
 			li{font-size: 13px; line-height: 20px; color: #F3F4F5; margin: 0 0 0 115px; list-style: disc outside;}
 			&.last{margin-left: 0;}
 			&.long{width: auto;float: none; margin: 0 0 70px 0;}
+      & + .img {
+        .column(10);
+        .push(1);
+        padding: 0;
+        img {
+          width: 100%;
+        }
+      }
 		}
 
-		.img{margin: 0 0 168px 0;clear: both; height: 329px; background: @bgBackgroundColor;}
+		.img{
+      // margin: 0 0 168px 0;
+      clear: both;
+      background: @bgBackgroundColor;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
 		h3{
         .clearfix;
         background:url(../images/index/primary-style-bg.png) no-repeat 0 0;
@@ -57,6 +89,8 @@ body{overflow-x: hidden;}
       // .push(1);
       // .pr;
       margin-top: -49px;
+      padding-bottom: 40px;
+      .clearfix;
       // z-index: 999;
       // overflow: hidden;margin: 0 0 0 0;
 			h3{
@@ -149,7 +183,7 @@ body{overflow-x: hidden;}
 }
 #cloudxns{
 	.bg{background:url(../images/products/banner-cloudxns.png) no-repeat center 0; }
-	.bg1{background: #adbdcc; padding: 40px 0 85px 0;}
+	.bg1{background: #adbdcc; padding: 6.px 0 125px 0;}
 	.bg2{background: #ced3d9;}
 }
 #idc{
