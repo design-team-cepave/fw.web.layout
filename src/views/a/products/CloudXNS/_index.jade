@@ -70,8 +70,9 @@ main#cloudxns.main-content
         .box
           h3 合作伙伴
           ul
+            - for (var x = 1; x < 20; x++)
             li
-              img(src='', alt='')
+              img(src='#{root_path}/images/case/#{x}.png', alt='')
           p
             a(href='#') 官方网站
   .blank
