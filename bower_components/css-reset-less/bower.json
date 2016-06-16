@@ -1,0 +1,23 @@
+{
+  "name": "css-reset-less",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ashwin512/css-reset-less",
+  "description": "Meyer's css file in less format",
+  "main": "css-reset.less",
+  "keywords": [
+    "css",
+    "reset",
+    "less"
+  ],
+  "authors": [
+    "Ashwin Reddy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
