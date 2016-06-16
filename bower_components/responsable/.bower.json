@@ -15,7 +15,6 @@
     "commit": "a13503e8e293e3a6fdc7a58ca12dcc13a8d2d816"
   },
   "_source": "https://github.com/Abban/Responsable-Grid-System.git",
-  "_target": "^2.2.0",
-  "_originalSource": "responsable",
-  "_direct": true
+  "_target": "~2.2.0",
+  "_originalSource": "responsable"
 }
