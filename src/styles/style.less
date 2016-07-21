@@ -428,10 +428,12 @@ Main components
     &:extend(.is-inlineblock);
 
     h3 {
-      font-size: 0;
-      color: transparent;
+      font-size: 24px;
+      color: @colorGrayDarkest;
+      text-align: left;
       &:extend(.is-block);
-      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
 
     .description {
@@ -462,7 +464,7 @@ Main components
     .right-col {
       padding-left: 15px;
       padding-bottom: 30px;
-      margin-top: 50px;
+      margin-top: 40px;
       .span(9.5);
     }
 
@@ -489,17 +491,18 @@ Main components
   .cloudcdn {
     .span(12);
   }
-  .cloudxns {
+  .idc{
     .span(2.7);
   }
-  .newdefend {
+  .flow {
     .span(2.7);
   }
-  .more {
+  .third-part {
     .span(6.6);
   }
-  .more {
+  .third-part {
     &-item {
+      vertical-align: top;
       &:extend(.is-inlineblock);
     }
     .left-col {
@@ -507,7 +510,6 @@ Main components
       .span(4);
       &:extend(.opa-75);
       .transition(opacity .3s 0s);
-
     }
     &:hover .left-col {
       opacity: .8;

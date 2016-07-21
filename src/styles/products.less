@@ -2,62 +2,56 @@
 
 body{overflow-x: hidden;}
 
-.main-content{background: #fff; z-index: 999;
-	.hero{ background: #fff; margin: 0 auto;.pr;overflow: hidden;
-		.bg{border: 20px @colorPrimaryA solid; border-bottom: 0 none;min-height: 420px;position: relative; background-size: cover;
-			h1{font-size: 65px; line-height: 91px; color: #fff;.txc; margin: 100px 0 8px 0;.f7;}
-			p{.f14; line-height: 19px;.txc; color: #fff; letter-spacing: 12px;}
-			hr{.show; width: 170px; height: 0; line-height: 0; border: 0 none; border-bottom: 2px #E64545 solid; margin: 25px auto 0;}
-		}
-		.bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:#fff;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
-	}
-	.category{background: #fff;
-		ul{width: 1140px; margin: 0 auto;.clearfix;
-			li{.fl;
-				a{color: #3D4141;.f18; line-height: 21px; white-space: nowrap; width: 142px; height: 130px;.txc;.show;opacity:0.5;
-					.icon-56{.show; width: 56px; height: 56px; margin: 0 auto;}
-					.text{.f16; line-height: 21px; color: #3D4141}
-					&.current,&:hover{border-bottom: 10px #D92E2B solid; opacity:1}
-				}
-			}
-		}
-	}
-	.wrapper {
+.main-content{background: @productBackground1; z-index: 999;
+  .hero{ background: #fff; margin: 0 auto;.pr;overflow: hidden;
+    .bg{border: 20px @colorPrimaryA solid; border-bottom: 0 none;min-height: 420px;position: relative; background-size: cover;
+      h1{font-size: 65px; line-height: 91px; color: #fff;.txc; margin: 100px 0 8px 0;.f7;}
+      p{.f14; line-height: 19px;.txc; color: #fff; letter-spacing: 12px;}
+      hr{.show; width: 170px; height: 0; line-height: 0; border: 0 none; border-bottom: 2px #E64545 solid; margin: 25px auto 0;}
+    }
+    .bannerbottom{.pa;left:-5%;bottom:-100px;width: 110%;height: 150px; background:#fff;z-index: 888;transform:rotate(-3deg);-ms-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-webkit-transform:rotate(-3deg);-o-transform:rotate(-3deg); }
+  }
+  .category{background: #fff;
+    ul{width: 1140px; margin: 0 auto;.clearfix;
+      li{.fl;
+        a{color: #3D4141;.f18; line-height: 21px; white-space: nowrap; width: 142px; height: 130px;.txc;.show;opacity:0.5;
+          .icon-56{.show; width: 56px; height: 56px; margin: 0 auto;}
+          .text{.f16; line-height: 21px; color: #3D4141}
+          &.current,&:hover{border-bottom: 10px #D92E2B solid; opacity:1}
+        }
+      }
+    }
+  }
+  .wrapper {
     .clearfix;
     width: 1140px; margin: 0 auto;.pr; z-index: 999;
-		.head{
-			h2{color: #3D4141;font-size: 42px; line-height: 64px; margin: 0 0 15px 0;}
-			p{color: #535353; font-size: 20px; line-height: 26px; margin: 0 0 50px 0;}
-		}
-		.title{
+    .head{
+      h2{color: #3D4141;font-size: 42px; line-height: 64px; margin: 0 0 15px 0;}
+      p{color: #535353; font-size: 20px; line-height: 26px; margin: 0 0 50px 0;}
+    }
+    .title{
       .column(12);
       .clearfix;
       // .push(1);
       // margin-bottom: 80px;
       margin-top: 60px;
-			h2{background:url(../images/index/white-style-bg.png) no-repeat 0 0;
-        padding: 50px 0 0 100px;
-        color: #fff;
-        min-height: 115px;
-        font-size: 42px;
-        line-height: 64px;
-        margin-bottom: 30px;}
-			p{.f16; line-height: 31px;color: #fff}
-		}
-		.product{
+      h2{background:url(../images/index/primary-style-bg.png) no-repeat 0 0; padding: 50px 0 0 100px; color: #3D4141; font-size: 42px; line-height: 64px; margin: 0 0 30px -100px;.f4;}
+      p{.f16; line-height: 31px;color: #6F787E}
+    }
+    .product{
       clear: both;
       .clearfix;
       overflow: hidden;
       padding-top: 40px;
       padding-bottom: 80px;
     }
-		.box {
+    .box {
       .column(5);
       .push(1);
       // width: 470px; margin: 0 30px 50px 0;.fl;
-			li{font-size: 13px; line-height: 20px; color: #F3F4F5; margin: 0 0 0 115px; list-style: disc outside;}
-			&.last{margin-left: 0;}
-			&.long{width: auto;float: none; margin: 0 0 70px 0;}
+      li{font-size: 13px; line-height: 20px; color: #3D4141; margin: 0 0 0 115px; list-style: disc outside;}
+      &.last{margin-left: 0;}
+      &.long{width: auto;float: none; margin: 0 0 70px 0;}
       & + .img {
         .column(10);
         .push(1);
@@ -66,9 +60,9 @@ body{overflow-x: hidden;}
           width: 100%;
         }
       }
-		}
+    }
 
-		.img{
+    .img{
       // margin: 0 0 168px 0;
       clear: both;
       background: @bgBackgroundColor;
@@ -76,11 +70,11 @@ body{overflow-x: hidden;}
       margin-top: 30px;
       margin-bottom: 30px;
     }
-		h3{
+    h3{
         .clearfix;
         background:url(../images/index/primary-style-bg.png) no-repeat 0 0;
         padding: 50px 0 0 100px;
-        color: #fff; font-size: 32px;
+        color: #3D4141; font-size: 32px;
         line-height: 52px;
         margin-bottom: 30px;
       }
@@ -93,18 +87,18 @@ body{overflow-x: hidden;}
       .clearfix;
       // z-index: 999;
       // overflow: hidden;margin: 0 0 0 0;
-			h3{
+      h3{
         .column(11);
         .push(1);
         padding: 50px 0 0 100px;
       }
-			img{
+      img{
         .column(7);
         .pa;
         float: none;
         right: 0;
       }
-			.detail{
+      .detail{
         .column(6);
         .push(2);
         clear:both;.pr;
@@ -114,15 +108,15 @@ body{overflow-x: hidden;}
         padding: 60px 60px 20px 60px;
         box-shadow: 0px 8px 10px rgba(0,0,0,.22);
         z-index: 999; background: #fff;
-				div{margin: 0 0 40px 0;.clearfix;
-					h4{.fl; font-size: 20px; line-height: 25px; color: #9B9B9B;}
-					ol {
+        div{margin: 0 0 40px 0;.clearfix;
+          h4{.fl; font-size: 20px; line-height: 25px; color: #9B9B9B;}
+          ol {
             li {margin-bottom: 7px}
           }
           p, ol {.fr; width:355px;font-size: 13px; line-height: 18px; color: #6F787E}
-				}
-			}
-		}
+        }
+      }
+    }
     .partner {
       padding-top: 50px;
       padding-bottom: 50px;
@@ -154,59 +148,52 @@ body{overflow-x: hidden;}
         .push(4);
       }
     }
-	}
-	.bg1{background: @colorPrimaryA;}
-	.bg2{background: darken(@colorPrimaryA, 20%);
-		.wrapper{
-			.product{.pr;.clearfix;top:-101px;z-index: 999; }
-		}
-	}
-	.blank{background: #fff; height: 0;}
+  }
+  .bg1{background: @solutionBackground1;}
+  .bg2{background: @solutionBackground2;
+    .wrapper{
+      .product{.pr;.clearfix;top:-101px;z-index: 999; }
+    }
+  }
+  .blank{background: @solutionBackground2; height: 0;}
 }
-@colorPrimaryADark: darken(@colorPrimaryA, 5%);
+@colorPrimaryADark: darken(@colorGrayLightest, 5%);
 #cloudcdn{
-	.bg{background:url(../images/products/banner-cloudcdn.png) no-repeat center 0; }
-	.bg1{background: @colorPrimaryA;}
-	.bg2{background: @colorPrimaryADark;}
+  .bg{background:url(../images/products/banner-cloudcdn.png) no-repeat center 0; }
 }
 #cloudcache{
-	.bg{background:url(../images/products/banner-cloudcache.png) no-repeat center 0; }
-	.bg1{background: #a8a38a; padding: 40px 0 85px 0;}
-	.bg2{background: #a8a68a;}
+  .bg{background:url(../images/products/banner-cloudcache.png) no-repeat center 0; }
+  .bg1{padding: 40px 0 85px 0;}
 }
 #clouddiy{
-	.bg{background:url(../images/products/banner-clouddiy.png) no-repeat center 0; }
-	.bg1{background: #878255; padding: 40px 0 85px 0;}
-	.bg2{background: #94916c;}
+  .bg{background:url(../images/products/banner-clouddiy.png) no-repeat center 0; }
+  .bg1{padding: 40px 0 85px 0;}
 }
 #cloudtoolebox{
-	.bg{background:url(../images/products/banner-cloudtoolebox.png) no-repeat center 0; }
+  .bg{background:url(../images/products/banner-cloudtoolebox.png) no-repeat center 0; }
 }
 #cloudxns{
-	.bg{background:url(../images/products/banner-cloudxns.png) no-repeat center 0; }
-	.bg1{background: #adbdcc; padding: 6.px 0 125px 0;}
-	.bg2{background: #ced3d9;}
+  .bg{background:url(../images/products/banner-cloudxns.png) no-repeat center 0; }
+  .bg1{padding: 6.px 0 125px 0;}
 }
 #idc{
-	.bg{background:url(../images/products/banner-idc.png) no-repeat center 0; }
-	.bg1{background: #22262a; padding: 60px 0 125px 0;}
-	.bg2{background: #313336;}
+  .bg{background:url(../images/products/banner-idc.png) no-repeat center 0; }
+  .bg1{padding: 60px 0 125px 0;}
 }
 #newdefend{
-	.bg{background:url(../images/products/banner-newdefend.png) no-repeat center 0; }
-	.bg1{background: #203040; padding: 60px 0 125px 0;}
-	.bg2{background: #2e3d4d;}
+  .bg{background:url(../images/products/banner-newdefend.png) no-repeat center 0; }
+  .bg1{padding: 60px 0 125px 0;}
 }
 .main-footer{margin-top: 0px;}
 .footer-top{}
 
 
 @media screen and (min-width: 1440px){
-	#cloudcdn .bg{background:url(../images/products/banner-cloudcdn@2x.png) no-repeat center 0; background-size: cover; }
-	#cloudcache .bg{background:url(../images/products/banner-cloudcache@2x.png) no-repeat center 0; background-size: cover; }
-	#clouddiy .bg{background:url(../images/products/banner-clouddiy@2x.png) no-repeat center 0; background-size: cover; }
-	#cloudtoolebox .bg{background:url(../images/products/banner-cloudtoolebox@2x.png) no-repeat center 0; background-size: cover; }
-	#cloudxns .bg{background:url(../images/products/banner-cloudxns@2x.png) no-repeat center 0; background-size: cover; }
-	#idc .bg{background:url(../images/products/banner-idc@2x.png) no-repeat center 0; background-size: cover; }
-	#newdefend .bg{background:url(../images/products/banner-newdefend@2x.png) no-repeat center 0; background-size: cover; }
+  #cloudcdn .bg{background:url(../images/products/banner-cloudcdn@2x.png) no-repeat center 0; background-size: cover; }
+  #cloudcache .bg{background:url(../images/products/banner-cloudcache@2x.png) no-repeat center 0; background-size: cover; }
+  #clouddiy .bg{background:url(../images/products/banner-clouddiy@2x.png) no-repeat center 0; background-size: cover; }
+  #cloudtoolebox .bg{background:url(../images/products/banner-cloudtoolebox@2x.png) no-repeat center 0; background-size: cover; }
+  #cloudxns .bg{background:url(../images/products/banner-cloudxns@2x.png) no-repeat center 0; background-size: cover; }
+  #idc .bg{background:url(../images/products/banner-idc@2x.png) no-repeat center 0; background-size: cover; }
+  #newdefend .bg{background:url(../images/products/banner-newdefend@2x.png) no-repeat center 0; background-size: cover; }
 }
