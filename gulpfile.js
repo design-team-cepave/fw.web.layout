@@ -87,6 +87,12 @@ gulp.task('js', function() {
   var appFile = gulp.src('./src/scripts/contactus.js')
     .pipe( gulp.dest('dist/scripts/'));
 
+  var appFile = gulp.src('./src/scripts/product.js')
+    .pipe( gulp.dest('dist/scripts/'));
+
+  var appFile = gulp.src('./src/scripts/solution.js')
+    .pipe( gulp.dest('dist/scripts/'));
+
   var appFile = gulp.src('./src/scripts/fixed.js')
     .pipe( gulp.dest('dist/scripts/'));
 
