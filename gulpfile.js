@@ -33,23 +33,6 @@ gulp.task('vendor:js', function() {
     .pipe(plumber())
     .pipe(gulp.dest('src/scripts/vendor'));
 });
-gulp.task('vendor:lesslib', function() {
-  return gulp.src(['bower_components/lesshat/build/lesshat.less',])
-    .pipe(plumber())
-    .pipe(gulp.dest('src/styles/lib'));
-});
-gulp.task('vendor:lessgrid', function() {
-  return gulp.src(['bower_components/responsable/less/responsable.less',])
-    .pipe(plumber())
-    .pipe(gulp.dest('src/styles/lib'));
-});
-gulp.task('vendor:lessreset', function() {
-  return gulp.src(['bower_components/css-reset-less/css-reset.less',])
-    .pipe(plumber())
-    .pipe(gulp.dest('src/styles/lib'));
-});
-
-gulp.task('vendor', ['vendor:js', 'vendor:lesslib', 'vendor:lessgrid']);
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -68,7 +51,7 @@ gulp.task('styles', function() {
     .pipe($.less({
       paths: [
       'bower_components/lesshat/build/',
-      'bower_components/responsable/less/',
+      'bower_components/Responsable-Grid-System/less/',
       'bower_components/css-reset-less/',
       'src/styles/'
       ]
