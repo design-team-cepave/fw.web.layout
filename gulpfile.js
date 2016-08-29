@@ -62,23 +62,12 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist/stylesheets/'));
 });
 
-gulp.task('js', function() {
+gulp.task('js',['vendor:js'], function() {
   var appFile = gulp.src('./src/scripts/navigation.js')
     .pipe( $.rename('app.js'))
     .pipe( gulp.dest('dist/scripts/'));
-
-  var appFile = gulp.src('./src/scripts/contactus.js')
+  var distFile = gulp.src('src/scripts/*.js')
     .pipe( gulp.dest('dist/scripts/'));
-
-  var appFile = gulp.src('./src/scripts/product.js')
-    .pipe( gulp.dest('dist/scripts/'));
-
-  var appFile = gulp.src('./src/scripts/solution.js')
-    .pipe( gulp.dest('dist/scripts/'));
-
-  var appFile = gulp.src('./src/scripts/fixed.js')
-    .pipe( gulp.dest('dist/scripts/'));
-
   var vendorFile = gulp.src('src/scripts/vendor/**/*')
     .pipe( gulp.dest('dist/scripts/vendor'));
 });
