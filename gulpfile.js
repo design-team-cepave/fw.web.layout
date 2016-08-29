@@ -51,7 +51,7 @@ gulp.task('styles', function() {
     .pipe($.less({
       paths: [
       'bower_components/lesshat/build/',
-      'bower_components/Responsable-Grid-System/less/',
+      'bower_components/responsable/less/',
       'bower_components/css-reset-less/',
       'src/styles/'
       ]
