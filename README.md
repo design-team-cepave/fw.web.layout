@@ -20,10 +20,10 @@ Installation
 
 **Step 2: install the required dependencies**
 
-``$ gulp install -g``
+``$ npm install gulp -g``
 
 
-``$ bower install -g``
+``$ npm install bower -g``
 
 
 执行安装
@@ -35,9 +35,6 @@ Installation
 
 
 **Step 3: Rock'n'Roll**
-
-``$ gulp vendor``
-
 
 万岁! 开始吧～
 
