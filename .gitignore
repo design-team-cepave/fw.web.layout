@@ -4,4 +4,12 @@ bower_components
 .DS_Store
 
 build
-dist
+
+dist/*
+!dist/images/
+dist/images/*
+!dist/images/icons/
+dist/images/icons/*
+!dist/images/icons/icon-*
+src/styles/icons
+src/images/icons/icon-..png
