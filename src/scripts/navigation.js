@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-  $("#category").scrollToFixed({ marginTop: 84});
+  $(".category").scrollToFixed({ marginTop: 84});
 
   $("#fixedbar .bar").on("mouseenter", function (e) {
       $(this).addClass('hover');
