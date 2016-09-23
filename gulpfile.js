@@ -29,7 +29,7 @@ gulp.task('sprites', function () {
 });
 
 gulp.task('vendor:js', function() {
-  return gulp.src('bower_components/jquery/dist/**/*')
+  return gulp.src(['bower_components/jquery/dist/**/*','bower_components/ScrollToFixed/jquery-scrolltofixed-min.js'])
     .pipe(plumber())
     .pipe(gulp.dest('src/scripts/vendor'));
 });
