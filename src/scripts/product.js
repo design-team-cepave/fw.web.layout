@@ -2,12 +2,11 @@ jQuery(document).ready(function($) {
 	var hash = window.location.hash;
 	if(hash !="")
 	{
+        var hashindex = hash.replace(/#category/, "") - 1;
 		$(".inner .content:visible").hide();
-        $(".inner").find(hash).show();
-        var hashindex = $(".inner .content").index($(".inner").find(hash));
+        $(".inner .content").eq(hashindex).show();
         $('.main-content .category li a.current').removeClass("current");
         $(".main-content .category li").eq(hashindex).children("a").addClass("current");
-        return false;
 	}
     $('.main-content .category li a').on("click", function(){
         var index = $('.main-content .category li').index($(this).parent());
